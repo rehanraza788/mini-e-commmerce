@@ -6,10 +6,11 @@ export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [product, setProduct] = useState([]);
-  console.log(product);
 
-  //   fetch product from api
+  const [cartItem, setCartItem] = useState([]);
+  console.log(cartItem);
 
+  //   fetch GET product from api
   const fetchProduct = async () => {
     const res = await fetch("api/products");
     const data = await res.json();
@@ -20,8 +21,16 @@ export const ProductProvider = ({ children }) => {
     fetchProduct();
   }, []);
 
+  // add to cart function
+
+  const addToCart = (product) => {
+    setCartItem([...cartItem, product]);
+  };
+
   return (
-    <ProductContext.Provider value={{ product, setProduct }}>
+    <ProductContext.Provider
+      value={{ product, setProduct, addToCart, cartItem }}
+    >
       {children}
     </ProductContext.Provider>
   );

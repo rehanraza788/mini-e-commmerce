@@ -6,7 +6,11 @@ const page = () => {
   // const [products, setProducts] = useState([]);
   // console.log(product);
 
-  const { product, setProduct } = useContext(ProductContext);
+  const { product, addToCart } = useContext(ProductContext);
+
+  // const handleClick = (id) => {
+  //   console.log(id);
+  // };
 
   return (
     <div>
@@ -54,7 +58,10 @@ const page = () => {
                   <span className="text-xl font-bold text-gray-900">
                     ₹ {product.price}
                   </span>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-2xl text-sm font-medium transition-colors">
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-2xl text-sm font-medium transition-colors"
+                  >
                     Add to Cart
                   </button>
                 </div>
