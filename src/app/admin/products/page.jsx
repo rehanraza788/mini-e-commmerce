@@ -33,6 +33,15 @@ const page = () => {
     }
   };
 
+  const categories = [
+    "Electronics",
+    "Fashion",
+    "Shoes",
+    "Mobiles",
+    "Laptops",
+    "Accessories"
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +71,7 @@ const page = () => {
                   placeholder="Enter product title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg  transition-colors"
                   required
                 />
               </div>
@@ -77,7 +86,7 @@ const page = () => {
                   placeholder="0.00"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg  transition-colors"
                   required
                 />
               </div>
@@ -89,14 +98,21 @@ const page = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Category
                 </label>
-                <input
-                  type="text"
-                  placeholder="Enter product category"
+
+                <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                   required
-                />
+                >
+                  <option value="">Select Category</option>
+
+                  {categories.map((cat, index) => (
+                    <option key={index} value={cat}>
+                      {cat}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div>
@@ -108,7 +124,7 @@ const page = () => {
                   placeholder="https://example.com/image.jpg"
                   value={img}
                   onChange={(e) => setImg(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg   transition-colors"
                 />
               </div>
             </div>
@@ -123,7 +139,7 @@ const page = () => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-vertical"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg  transition-colors resize-vertical"
                 required
               />
             </div>
