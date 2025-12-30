@@ -1,6 +1,6 @@
 let products = [
   {
-    id: 1,
+    id: Date.now(),
     title: "LapTop",
     price: 50000,
     category: "Electronics",

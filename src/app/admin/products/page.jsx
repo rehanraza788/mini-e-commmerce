@@ -152,6 +152,16 @@ const page = () => {
               </button>
             </div>
           </div>
+          {/* show product list  */}
+          {/* <div>
+            {product.map((pro) => {
+              return (
+                <ul key={pro.id}>
+                  <li> {pro.title} </li>
+                </ul>
+              );
+            })}
+          </div> */}
         </div>
       </div>
     </div>

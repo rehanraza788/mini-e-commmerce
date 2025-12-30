@@ -1,22 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { ProductContext } from "@/context/ProductContext";
+import React, { useContext, useEffect } from "react";
 
 const page = () => {
-  const [products, setProducts] = useState([]);
-  console.log(products);
+  // const [products, setProducts] = useState([]);
+  // console.log(product);
 
-  // fetch product from api
-
-  const fetchProduct = async () => {
-    const res = await fetch("api/products");
-    const data = await res.json();
-    setProducts(data);
-    // console.log(data);
-  };
-
-  useEffect(() => {
-    fetchProduct();
-  }, []);
+  const { product, setProduct } = useContext(ProductContext);
 
   return (
     <div>
@@ -24,7 +14,7 @@ const page = () => {
       <h1>product list</h1>
       {/* product Cards  */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6">
-        {products.map((product, index) => {
+        {product.map((product, index) => {
           return (
             <div
               key={index}

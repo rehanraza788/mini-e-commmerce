@@ -5,7 +5,6 @@ import React, { useState } from "react";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartItems] = useState(3); // Example cart count
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -135,11 +134,9 @@ const NavBar = () => {
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.1 5H19M7 13v8a2 2 0 002 2h10a2 2 0 002-2v-3"
                     />
                   </svg>
-                  {cartItems > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                      {cartItems}
-                    </span>
-                  )}
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {}
+                  </span>
                 </button>
               </div>
             </Link>
