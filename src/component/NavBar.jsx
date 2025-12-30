@@ -1,8 +1,7 @@
 "use client";
 
-import { ProductContext } from "@/context/ProductContext";
 import Link from "next/link";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
