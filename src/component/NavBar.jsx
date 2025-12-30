@@ -14,45 +14,45 @@ const NavBar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-gray-900">
+            <Link href="/" className="text-2xl font-bold text-gray-900">
               MiniShop
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a
+              <Link
                 href="/"
                 className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/shop"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Shop
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/categories"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Categories
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/contact"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Contact
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/admin/products"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Admin User
-              </a>
+              </Link>
             </div>
           </div>
 
