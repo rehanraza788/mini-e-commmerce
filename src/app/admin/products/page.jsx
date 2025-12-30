@@ -1,6 +1,5 @@
 "use client";
 
-import { ProductContext } from "@/context/ProductContext";
 import React, { useContext, useState } from "react";
 
 const page = () => {
@@ -9,8 +8,6 @@ const page = () => {
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
   const [img, setImg] = useState("");
-
-  const { product, setProduct } = useContext(ProductContext);
 
   const addProduct = async () => {
     try {

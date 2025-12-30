@@ -6,7 +6,6 @@ import React, { useContext, useState } from "react";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const { cartItem } = useContext(ProductContext);
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
