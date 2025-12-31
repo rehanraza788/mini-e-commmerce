@@ -14,8 +14,14 @@ const page = () => {
 
   return (
     <div>
-      {/* title  */}
-      <h1>product list</h1>
+      {/* for offer banner*/}
+      <div className="w-full mt-8">
+        <img
+          src="https://img.freepik.com/premium-vector/sale-banner%E2%80%A6uper-offer-banner-template_497837-1632.jpg?w=1480"
+          alt="Offer Banner"
+          className="w-full h-[200px] sm:h-[300px] md:h-[400px] object-cover rounded"
+        />
+      </div>
       {/* product Cards  */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6">
         {product.map((product, index) => {
